@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Latar belakang gelap untuk halaman */
+        body {
+            background-color: #2c2c2c;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            position: relative; /* Membuat container untuk tombol kembali */
+        }
+
+        /* Membuat form terlihat lebih baik */
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #f5a623;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Membuat semua input text dan password rata tengah dan lebih kecil */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            background-color: #555;
+            border: 1px solid #777;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Tombol Login */
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #d43f3a; /* Warna merah lebih gelap saat hover */
+        }
+
+        /* Tombol Panah Kembali yang lebih kecil dan posisinya di pojok kiri atas */
+        .back-button {
+            position: fixed;  /* Menggunakan fixed agar selalu di pojok kiri atas */
+            top: 10px; /* Posisikan lebih tinggi di pojok kiri atas */
+            left: 10px; /* Posisikan di kiri */
+            background-color: transparent;
+            border: none;
+            font-size: 20px; /* Ukuran lebih kecil tapi jelas */
+            color: #fff;
+            cursor: pointer;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .back-button:hover {
+            color: #f5a623; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Panah Kembali -->
+    <a href="danger.html">
+        <button class="back-button">&#8592;</button> <!-- Panah Kembali -->
+    </a>
+
+    <h2>Login</h2>
+
+    <form action="proses_login.php" method="POST">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="password">Kata Sandi:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+</body>
+</html>
